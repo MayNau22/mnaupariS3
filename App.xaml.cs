@@ -11,7 +11,11 @@ namespace mnaupariS3
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new Views.vLogin());
+            return new Window(
+                new NavigationPage(
+                    new Views.vLogin()
+                )
+            );
         }
     }
 }

@@ -6,10 +6,11 @@
     <VerticalStackLayout>
         <Label x:Name="lblUsuario"
                HorizontalTextAlignment="End"
-               />
+               FontSize="14"/>
         
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Ventana Principal"
+            FontSize="20"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

@@ -6,7 +6,8 @@ public partial class vPrincipal : ContentPage
 	{
 		InitializeComponent();
 
-		
+        DisplayAlertAsync("Bienvenido", usuario, "Cerrar");
+        lblUsuario.Text = "Usuario Conectado " + usuario;
 
-	}
+    }
 }

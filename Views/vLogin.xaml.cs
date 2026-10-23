@@ -26,7 +26,7 @@ public partial class vLogin : ContentPage
 			if (usuario == usuarioingresado && contrasena == contrasenaingresada)
 
 			{
-				await Navigation.PushAsync(new Views.vPrincipal());
+				await Navigation.PushAsync(new Views.vPrincipal(usuario));
 			}
 
 			else
@@ -38,18 +38,17 @@ public partial class vLogin : ContentPage
 
 			}
 		}
-		catch (Exception)
+		catch (Exception ex)
 		{
 
-			throw;
-		}
+            await DisplayAlertAsync("ERROR", ex.Message, "Cerrar");
+            
+        }
 
     }
 
     private async void btnRegistrarUsuario_Clicked(object sender, EventArgs e)
     {
-		await Navigation.PushAsync(new Views.vRegistro());
+        await Navigation.PushAsync(new Views.vRegistro());
     }
-
-
 }

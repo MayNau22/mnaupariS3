@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mnaupariS3.Views.vRegistro"
              Title="vRegistro">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Purple"/>
+        </Style>
+    </ContentPage.Resources>
     <VerticalStackLayout
         Padding="15"
         Spacing="15">
@@ -18,7 +29,7 @@
         <Entry x:Name="txContrasena"
                Placeholder="Ingresa la contraseña"
                />
-        <Grid>
+        <Grid ColumnSpacing="17">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -28,6 +39,7 @@
         </Grid>
         <Button x:Name="btnGuardarUsuario"
                 Text="Guardar Usuario"
+                 Style="{StaticResource Boton}"
                 Clicked="btnGuardarUsuario_Clicked"
                 Grid.Row="0"
                 Grid.Column="0"
